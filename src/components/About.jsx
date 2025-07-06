@@ -52,7 +52,7 @@ export default function About() {
           {/* Social Icons */}
           <div className="flex justify-center md:justify-start gap-6 text-2xl mt-6">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/mritunjay226"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-600 dark:hover:text-blue-400 transform transition duration-300 hover:scale-110"
@@ -60,21 +60,14 @@ export default function About() {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/in/mritunjay-mishra-2275b3373"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-600 dark:hover:text-blue-400 transform transition duration-300 hover:scale-110"
             >
               <FaLinkedin />
             </a>
-            <a
-              href="https://twitter.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-600 dark:hover:text-blue-400 transform transition duration-300 hover:scale-110"
-            >
-              <FaTwitter />
-            </a>
+            
             <a
               href="https://instagram.com/mritunjay._mishra"
               target="_blank"
