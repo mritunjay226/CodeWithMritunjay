@@ -1,8 +1,16 @@
 import Section from "./Section";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaGithub, FaLinkedin, FaInstagram, FaUser, FaComment } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaUser,
+  FaComment,
+} from "react-icons/fa";
 import toast from "react-hot-toast";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const contactVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -14,13 +22,33 @@ const contactVariants = {
 };
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    toast.success("Message sent successfully!");
-    setFormData({ name: "", email: "", message: "" });
-  };
+  e.preventDefault();
+
+  emailjs.send(
+  import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  formData,
+  import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+)
+    .then(
+      () => {
+        toast.success("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      },
+      (error) => {
+        console.error("FAILED...", error);
+        toast.error("Failed to send message. Try again later.");
+      }
+    );
+};
+
 
   return (
     <Section id="contact" title="Contact Me">
@@ -31,7 +59,7 @@ export default function Contact() {
         variants={contactVariants}
         className="max-w-4xl mx-auto flex flex-col lg:flex-row gap-10"
       >
-        {/* Form Card */}
+        {/* Contact Form */}
         <div className="flex-1 backdrop-blur-lg bg-white/40 dark:bg-white/10 border border-gray-200 dark:border-gray-700 rounded-xl p-8 shadow-lg">
           <h3 className="text-2xl font-semibold mb-6 text-center text-black dark:text-white">
             Let’s work together!
@@ -47,7 +75,9 @@ export default function Contact() {
                 placeholder="Your Name"
                 required
                 value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
                 className="pl-10 w-full py-3 rounded-lg bg-gray-100 dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 outline-none"
               />
             </div>
@@ -61,7 +91,9 @@ export default function Contact() {
                 placeholder="Your Email"
                 required
                 value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
                 className="pl-10 w-full py-3 rounded-lg bg-gray-100 dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 outline-none"
               />
             </div>
@@ -75,7 +107,9 @@ export default function Contact() {
                 rows="5"
                 required
                 value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                }
                 className="pl-10 w-full py-3 rounded-lg bg-gray-100 dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 outline-none"
               />
             </div>
@@ -93,34 +127,40 @@ export default function Contact() {
         {/* Social Links */}
         <div className="flex-1 flex flex-col items-center justify-center gap-6">
           <p className="text-center text-gray-700 dark:text-gray-300 text-lg">
-            Connect with me on
+            Connect with me
           </p>
           <div className="flex gap-6 text-3xl text-gray-700 dark:text-gray-300">
             <a
-              href="mailto:youremail@example.com"
-              target="_blank"
+              href="mailto:mritunjay@example.com"
               className="hover:text-blue-500 transition-transform transform hover:scale-110"
+              aria-label="Email"
             >
               <FaEnvelope />
             </a>
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/mritunjay226"
               target="_blank"
+              rel="noreferrer"
               className="hover:text-black dark:hover:text-white transition-transform transform hover:scale-110"
+              aria-label="GitHub"
             >
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/in/mritunjay-mishra-2275b3373"
               target="_blank"
+              rel="noreferrer"
               className="hover:text-blue-600 transition-transform transform hover:scale-110"
+              aria-label="LinkedIn"
             >
               <FaLinkedin />
             </a>
             <a
-              href="https://instagram.com/yourusername"
+              href="https://instagram.com/mritunjay._mishra"
               target="_blank"
+              rel="noreferrer"
               className="hover:text-pink-500 transition-transform transform hover:scale-110"
+              aria-label="Instagram"
             >
               <FaInstagram />
             </a>
