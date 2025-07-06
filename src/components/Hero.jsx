@@ -15,12 +15,10 @@ export default function Hero({ dark }) {
 
       {/* Background Image */}
       <img
-  src="/mritunjay3.png"
-  alt="Mritunjay"
-  className="absolute md:static top-0 w-[115vw] md:left-0 md:w-1/2 h-full object-cover object-center z-0 md:z-10"
-        
-/>
-
+        src="/mritunjay5.png"
+        alt="Mritunjay"
+        className="absolute top-0 left-0 w-full h-full object-cover object-center z-0 md:[40px] md:static md:w-1/2 md:h-full md:z-10"
+      />
 
       {/* Text */}
       <div className="z-10 max-w-xl py-12 text-center md:text-left text-white md:text-black dark:text-white">
@@ -30,7 +28,7 @@ export default function Hero({ dark }) {
         </p>
         <a
           href="#contact"
-          className="inline-block bg-black dark:bg-white dark:text-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition"
+          className="inline-block font-bold bg-white dark:bg-white dark:text-black text-black px-6 py-3 border-2 border-white hover:bg-none rounded-full hover:bg-gray-800 transition"
         >
           Let's Work Together
         </a>
