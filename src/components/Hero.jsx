@@ -28,7 +28,7 @@ export default function Hero({ dark }) {
         </p>
         <a
           href="#contact"
-          className="inline-block font-bold bg-white dark:bg-white dark:text-black text-black px-6 py-3 border-2 border-white hover:bg-none rounded-full hover:bg-gray-800 transition"
+          className="inline-block font-bold bg-white dark:bg-white dark:text-black text-black px-6 py-3 border-2 border-white hover:bg-none rounded-full  transition"
         >
           Let's Work Together
         </a>
