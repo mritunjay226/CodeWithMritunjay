@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles/glow.css */
+.glow-effect {
+  box-shadow:
+    0 0 20px rgba(255, 255, 255, 0.3),
+    0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+.glow-filter {
+  filter:
+    drop-shadow(0 0 1px #beb031)
+    drop-shadow(0 0 2px #d2ed3a)
+    drop-shadow(0 0 3px #f5d417)
+    drop-shadow(0 0 4px #b6c71e);
+}
