@@ -11,7 +11,7 @@ export default function Hero({ dark }) {
       }}
     >
       {/* Overlay */}
-{/*       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 z-10" /> */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-40 z-10" />
 
       {/* Background Image */}
       <img
