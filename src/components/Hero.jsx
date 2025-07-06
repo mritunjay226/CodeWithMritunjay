@@ -17,7 +17,6 @@ export default function Hero({ dark }) {
       <img
   src="/mritunjay3.png"
   alt="Mritunjay"
-{/*   className="absolute md:static top-0 left-[-40px] w-[115vw] md:left-0 md:w-1/2 h-full object-cover object-center z-0 md:z-10" */}
   className="absolute md:static top-0 w-[115vw] md:left-0 md:w-1/2 h-full object-cover object-center z-0 md:z-10"
         
 />
