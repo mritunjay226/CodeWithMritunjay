@@ -7,17 +7,17 @@ const ProjectModal = lazy(() => import("./ProjectModal"));
 // Assets
 import ecommerceVideo from "../assets/Projects/PreviewVids/EcomerceVid.mp4";
 import ecommerceMobileVideo from "../assets/Projects/PreviewVids/EcomerceMobileVid.mp4";
-import blogVideo from "../assets/Projects/Project2.png";
-import AuthSysImage from "../assets/Projects/Project2.png";
-import portfolioImg2 from "../assets/Projects/Project3.png";
-import EccomImg from "../assets/Projects/Project4.png";
-import EccomImg2 from "../assets/Projects/Project4Thumb.png";
-import portfolioImg3 from "../assets/Projects/Project5.png";
-import ProductManagementImg from "../assets/Projects/Project6.png";
-import ProductManagementImg2 from "../assets/Projects/Project6b.png";
+import blogVideo from "../assets/Projects/Project2.webp";
+import AuthSysImage from "../assets/Projects/Project2.webp";
+import portfolioImg2 from "../assets/Projects/Project3.webp";
+import EccomImg from "../assets/Projects/Project4.webp";
+import EccomImg2 from "../assets/Projects/Project4Thumb.webp";
+import portfolioImg3 from "../assets/Projects/Project5.webp";
+import ProductManagementImg from "../assets/Projects/Project6.webp";
+import ProductManagementImg2 from "../assets/Projects/Project6b.webp";
 import BroTalk from "../assets/Projects/PreviewVids/BroTalk.mp4";
 import BroTalkImg from "../assets/Projects/Bot.jpg";
-import Project7 from "../assets/Projects/Project7.png";
+import Project7 from "../assets/Projects/Project7.webp";
 
 const allProjects = [
   {
