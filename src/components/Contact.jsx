@@ -22,7 +22,10 @@ const contactVariants = {
 };
 
 export default function Contact() {
+<<<<<<< HEAD
   console.log(import.meta.env.VITE_EMAILJS_TEMPLATE_ID)
+=======
+>>>>>>> 9c178e0 (hello)
   const [formData, setFormData] = useState({
     name: "",
     email: "",

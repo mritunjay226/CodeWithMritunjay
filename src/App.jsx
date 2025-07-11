@@ -23,6 +23,7 @@ export default function App() {
 }, []);
   return (
     <div className="font-ibm transition-colors duration-500 bg-white dark:bg-black text-black dark:text-white scroll-smooth">
+      
       <Navbar dark={dark} setDark={setDark} />
       <Toaster position="top-center" />
       <Hero dark={dark} />
