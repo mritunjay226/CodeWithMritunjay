@@ -4,9 +4,4 @@ import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
   plugins: [react(), visualizer()],
-  build: {
-    rollupOptions: {
-      external: ['@emailjs/browser'],
-    },
-  },
 });
