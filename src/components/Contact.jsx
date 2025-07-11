@@ -22,10 +22,6 @@ const contactVariants = {
 };
 
 export default function Contact() {
-<<<<<<< HEAD
-  console.log(import.meta.env.VITE_EMAILJS_TEMPLATE_ID)
-=======
->>>>>>> 9c178e0 (hello)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -33,26 +29,26 @@ export default function Contact() {
   });
 
   const handleSubmit = (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  emailjs.send(
-  import.meta.env.VITE_EMAILJS_SERVICE_ID,
-  import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-  formData,
-  import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-)
-    .then(
-      () => {
-        toast.success("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
-      },
-      (error) => {
-        console.error("FAILED...", error);
-        toast.error("Failed to send message. Try again later.");
-      }
-    );
-};
-
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formData,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          toast.success("Message sent successfully!");
+          setFormData({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          console.error("FAILED...", error);
+          toast.error("Failed to send message. Try again later.");
+        }
+      );
+  };
 
   return (
     <Section id="contact" title="Contact Me">
